@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea2._3GrabacionesAudios.MainPage"
+              BackgroundImageSource="backgroundfirma.png">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Frame
+              WidthRequest="396"
+              HeightRequest="60"
+              Margin="0,-697,0,0"
+              Background="Transparent"
+              BorderColor="Transparent"
+              CornerRadius="20">    
+            <Label
+              HorizontalOptions="Center"
+                Margin="0,1,0,0"
+               FontAttributes="Bold"
+                TextColor="Green"
+                FontSize="17"
+              Text="Tarea2.3 Grabacion de audios" >
+
+            </Label>
+
+        </Frame>
+
+
+
+
+        <StackLayout Spacing="10" Padding="10" Margin="0,110,0,0" BackgroundColor="Transparent" WidthRequest="390" HeightRequest="609">
+
+            <Frame VerticalOptions="FillAndExpand" 
+             Margin="0,0,0,0"
+             BorderColor="Transparent"
+             BackgroundColor="Transparent"
+             >
+                <Button x:Name="btnGrabarAudios"
+           ImageSource="microfono.png"
+           BorderWidth="5"
+           WidthRequest="370"
+           HeightRequest="290"
+           CornerRadius="30"
+           BorderColor="Green"
+           BackgroundColor="White"
+           Clicked="BtnGrabarAudio_Clicked"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="FillAndExpand"
+           ContentLayout="Top"/>
+            </Frame>
+
+
+
+
+            <Frame CornerRadius="10" 
+             Padding="5" 
+             BorderColor="Gray">
+                <StackLayout>
+                    <Label Text="Descripcion" FontAttributes="Bold"/>
+                    <Entry x:Name="txtDescripcion" VerticalOptions="FillAndExpand" Keyboard="Text" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+
+
+
+
+            <StackLayout Orientation="Horizontal" Padding="0" Spacing="5" Margin="0,30,0,0">
+                <Button x:Name="btnLista"
+           Text="Lista"
+           BackgroundColor="Green" 
+           Clicked="btnlistas_Clicked"
+           HorizontalOptions="FillAndExpand"/>
+
+                <Button x:Name="btnLimpiar"
+           Text="Limpiar"
+           Clicked="btnLimpiarDatos_Clicked"
+          BackgroundColor="Green"
+           HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btnGuardar"
+            Text="Guardar"
+            BackgroundColor="Green"
+            Clicked="btnGuargar_Clicked"
+            HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>
